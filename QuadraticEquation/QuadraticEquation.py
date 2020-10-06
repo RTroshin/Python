@@ -1,5 +1,3 @@
-# -*- coding: cp1251 -*-
-
 import math
 
 print('\nДано квадратное уравнение вида ax^2 + bx + c = 0')

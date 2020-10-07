@@ -2,9 +2,9 @@ from math import sqrt
 
 print('\nДано квадратное уравнение вида ax^2 + bx + c = 0')
 
-a = input('Введите a: ')
-b = input('Введите b: ')
-c = input('Введите c: ')
+a = int(input('Введите a: '))
+b = int(input('Введите b: '))
+c = int(input('Введите c: '))
 
 if a == 0:
 	if b == 0:

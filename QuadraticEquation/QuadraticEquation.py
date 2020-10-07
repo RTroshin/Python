@@ -16,9 +16,7 @@ if a == 0:
 		x = -c / b
 		print('{}{:.2f}{}'.format('\nКорень x: ', x, '\n'))
 else:
-
 	D = b * b - 4 * a * c
-
 	if D >= 0:
 		if D == 0:
 			x = (-b + sqrt(D)) / 2 * a

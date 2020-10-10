@@ -1,5 +1,3 @@
-# -*- coding: cp1251 -*-
-
 from math import sqrt
 
 # Вариант 3
@@ -22,14 +20,9 @@ def isqrt(n): # Метод Ньютона для вычисления целоч
 
 print('Введите координаты треугольника A(xa, ya), B(xb, yb ), C(xc, yc)')
 
-xa = input('Введите xa: ')
-ya = input('Введите ya: ')
-
-xb = input('Введите xb: ')
-yb = input('Введите yb: ')
-
-xc = input('Введите xc: ')
-yc = input('Введите yc: ')
+xa, ya = map(int, input('Введите xa и ya: ').split())
+xb, yb = map(int, input('Введите xb и yb: ').split())
+xc, yc = map(int, input('Введите xc и yc: ').split())
 
 xab = xb - xa
 yab = yb - ya

@@ -1,6 +1,4 @@
-from math import sqrt
-
-# Вариант 3
+from math import sqrt, degrees, hypot, acos, pi
 
 # Определение длин сторон треугольника по заданным координатам точек (тип Integer).
 # Найти также биссектрису, проведённую из наименьшего угла треугольника.
@@ -10,14 +8,6 @@ from math import sqrt
 # Далее ввести координаты одной точки (тоже Integer) и определить, находится ли она внутри треугольника или нет.
 # Если находится, то найти расстояние от этой точки до ближайшей стороны или её продолжения.
 
-def isqrt(n): # Метод Ньютона для вычисления целочисленного корня
-	x = n
-	y = (x + 1) // 2
-	while y < x:
-		x = y
-		y = (x + n // x) // 2
-	return x
-
 print('Введите координаты треугольника A(xa, ya), B(xb, yb ), C(xc, yc)')
 
 xa, ya = map(int, input('Введите xa и ya: ').split())
@@ -26,18 +16,18 @@ xc, yc = map(int, input('Введите xc и yc: ').split())
 
 xab = xb - xa
 yab = yb - ya
-AB = abs(isqrt(xab * xab + yab * yab))
-print('{}{}'. format('\nДлина стороны AB = ', AB))
+AB = sqrt(xab * xab + yab * yab)
+print('{}{:.4}'. format('\nДлина стороны AB = ', AB))
 
 xbc = xc - xb
 ybc = yc - yb
-BC = abs(isqrt(xbc * xbc + ybc * ybc))
-print('{}{}'. format('Длина стороны BC = ', BC))
+BC = sqrt(xbc * xbc + ybc * ybc)
+print('{}{:.4}'. format('Длина стороны BC = ', BC))
 
-xac = xc - xa
-yac = yc - ya
-AC = abs(isqrt(xac * xac + yac * yac))
-print('{}{}'. format('Длина стороны AC = ', AC))
+xca = xa - xc
+yca = ya - yc
+CA = sqrt(xca * xca + yca * yca)
+print('{}{:.4}'. format('Длина стороны CA = ', CA))
 
 if (AC >= AB + BC) or (AB >= BC + AC) or (BC >= AB + AC) or (AC + AB + AC == 0):
     print('\nТреугольника не существует\n')

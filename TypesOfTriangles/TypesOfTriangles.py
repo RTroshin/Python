@@ -45,3 +45,22 @@ scalarBCCA = abs(xbc * xca + ybc * yca)
 scalarABCA = abs(xab * xca + yab * yca)
 
 print('{}{}{}{}{}{}'.format('\nAB*BC = ', scalarABBC, '\nBC*CA = ', scalarBCCA, '\nAB*CA = ', scalarABCA))
+
+if (AB >= BC + CA) or (BC >= AB + CA) or (CA >= AB + BC) or (AB * BC * CA == 0.0):
+    print('\nТреугольника не существует')
+else:
+    cosABBC = degrees(acos(scalarABBC / (AB * BC)))
+    cosBCCA = degrees(acos(scalarBCCA / (BC * CA)))
+    cosABCA = degrees(acos(scalarABCA / (AB * CA)))
+    print('{}{}{}{}{}{}'.format('\ncosAB^BC = ', cosABBC, '\ncosBC^CA = ', cosBCCA, '\ncosAB^CA = ', cosABCA))
+
+    print('{}{:.4}'. format('\nКосинус угла между векторами AB и BC = ', cosABBC))
+    print('{}{:.4}'. format('Косинус угла между векторами BC и CA = ', cosBCCA))
+    print('{}{:.4}'. format('Косинус угла между векторами AB и CA = ', cosABCA))
+
+    if (cosABBC == 90) or (cosBCCA == 90) or (cosABCA == 90):
+        print('\nТреугольник прямоугольный')
+    elif (cosABBC < 90) and (cosBCCA < 90) and (cosABCA < 90):
+        print('\nТреугольник остроугольный')
+    else:
+        print('\nТреугольник тупоугольный')

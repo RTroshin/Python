@@ -37,3 +37,11 @@ elif (AC * AC < AB * AB + BC * BC) or (AB * AB < BC * BC + AC * AC) or (BC * BC 
     print('\nТреугольник остроугольный\n')
 elif (AC * AC > AB * AB + BC * BC) or (AB * AB > BC * BC + AC * AC) or (BC * BC > AB * AB + AC * AC):
     print('\nТреугольник тупоугольный\n')
+
+# Вычисление скалярного произведения
+
+scalarABBC = abs(xab * xbc + yab * ybc)
+scalarBCCA = abs(xbc * xca + ybc * yca)
+scalarABCA = abs(xab * xca + yab * yca)
+
+print('{}{}{}{}{}{}'.format('\nAB*BC = ', scalarABBC, '\nBC*CA = ', scalarBCCA, '\nAB*CA = ', scalarABCA))

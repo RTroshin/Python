@@ -64,3 +64,15 @@ else:
         print('\nТреугольник остроугольный')
     else:
         print('\nТреугольник тупоугольный')
+
+    # Нахождение биссектрисы
+
+    Hypotenuse = max(AC, AB, BC)
+    Cathetus = min(AC, AB, BC)
+
+    L = Cathetus * sqrt((2 * Hypotenuse) / Cathetus + Hypotenuse)
+
+    print('{}{:0.4}'.format('Биссектриса треугольника: ', L))
+
+    print('\nВведите координаты точки:')
+    xp, yp = map(int, input('Введите xp и yp: ').split)

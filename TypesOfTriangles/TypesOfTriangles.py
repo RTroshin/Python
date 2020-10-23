@@ -40,9 +40,13 @@ elif (AC * AC > AB * AB + BC * BC) or (AB * AB > BC * BC + AC * AC) or (BC * BC 
 
 # Вычисление скалярного произведения
 
-scalarABBC = abs(xab * xbc + yab * ybc)
-scalarBCCA = abs(xbc * xca + ybc * yca)
-scalarABCA = abs(xab * xca + yab * yca)
+#scalarABBC = abs(xab * xbc + yab * ybc)
+#scalarBCCA = abs(xbc * xca + ybc * yca)
+#scalarABCA = abs(xab * xca + yab * yca)
+
+scalarABBC = xab * xbc + yab * ybc
+scalarBCCA = xbc * xca + ybc * yca
+scalarABCA = xab * xca + yab * yca
 
 print('{}{}{}{}{}{}'.format('\nAB*BC = ', scalarABBC, '\nBC*CA = ', scalarBCCA, '\nAB*CA = ', scalarABCA))
 

@@ -32,6 +32,12 @@ while True:
     CA = sqrt(cax * cax + cay * cay)
     print('{}{:.4f}'.format('Длина стороны CA = ', CA))
 
+    AB2 = AB * AB
+    BC2 = BC * BC
+    CA2 = CA * CA
+
+    Eps = 0.001 # Точность для вычислений
+
     if (AC >= AB + BC) or (AB >= BC + AC) or (BC >= AB + AC) or (AC + AB + AC == 0):
         print('\nТреугольника не существует\n')
     elif (AC * AC == AB * AB + BC * BC) or (AB * AB == BC * BC + AC * AC) or (BC * BC == AB * AB + AC * AC):

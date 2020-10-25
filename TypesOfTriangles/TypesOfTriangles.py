@@ -1,4 +1,4 @@
-from math import sqrt, degrees, hypot, acos, pi
+from math import sqrt
 
 # Определение длин сторон треугольника по заданным координатам точек (тип Integer).
 # Найти также биссектрису, проведённую из наименьшего угла треугольника.
@@ -11,7 +11,7 @@ from math import sqrt, degrees, hypot, acos, pi
 
 print()
 while True:
-    print('Введите координаты треугольника A(xa, ya), B(xb, yb ), C(xc, yc)')
+    print('Введите координаты треугольника A(ax, ay), B(bx, by), C(cx, cy)')
 
     xa, ya = map(int, input('Введите xa и ya: ').split())
     xb, yb = map(int, input('Введите xb и yb: ').split())

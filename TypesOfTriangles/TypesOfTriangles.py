@@ -12,25 +12,25 @@ from math import sqrt
 print()
 while True:
     print('Введите координаты треугольника A(ax, ay), B(bx, by), C(cx, cy)')
+ 
+    ax, ay = map(int, input('Координаты ax и ay: ').split())
+    bx, by = map(int, input('Координаты bx и by: ').split())
+    cx, cy = map(int, input('Координаты cx и cy: ').split())
 
-    xa, ya = map(int, input('Введите xa и ya: ').split())
-    xb, yb = map(int, input('Введите xb и yb: ').split())
-    xc, yc = map(int, input('Введите xc и yc: ').split())
+    abx = bx - ax
+    aby = by - ay
+    AB = sqrt(abx * abx + aby * aby)
+    print('{}{:.4f}'.format('\nДлина стороны AB = ', AB))
 
-    xab = xb - xa
-    yab = yb - ya
-    AB = sqrt(xab * xab + yab * yab)
-    print('{}{:.4}'. format('\nДлина стороны AB = ', AB))
+    bcx = cx - bx
+    bcy = cy - by
+    BC = sqrt(bcx * bcx + bcy * bcy)
+    print('{}{:.4f}'.format('Длина стороны BC = ', BC))
 
-    xbc = xc - xb
-    ybc = yc - yb
-    BC = sqrt(xbc * xbc + ybc * ybc)
-    print('{}{:.4}'. format('Длина стороны BC = ', BC))
-
-    xca = xa - xc
-    yca = ya - yc
-    CA = sqrt(xca * xca + yca * yca)
-    print('{}{:.4}'. format('Длина стороны CA = ', CA))
+    cax = ax - cx
+    cay = ay - cy
+    CA = sqrt(cax * cax + cay * cay)
+    print('{}{:.4f}'.format('Длина стороны CA = ', CA))
 
     if (AC >= AB + BC) or (AB >= BC + AC) or (BC >= AB + AC) or (AC + AB + AC == 0):
         print('\nТреугольника не существует\n')

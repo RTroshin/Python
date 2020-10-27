@@ -38,41 +38,56 @@ while True:
 
     Eps = 0.001 # Точность для вычислений
 
-    if (AC >= AB + BC) or (AB >= BC + AC) or (BC >= AB + AC) or (AC + AB + AC == 0):
-        print('\nТреугольника не существует\n')
-    elif (AC * AC == AB * AB + BC * BC) or (AB * AB == BC * BC + AC * AC) or (BC * BC == AB * AB + AC * AC):
-        print('\nТреугольник прямоугольный\n')
-    elif (AC * AC < AB * AB + BC * BC) or (AB * AB < BC * BC + AC * AC) or (BC * BC < AB * AB + AC * AC):
-        print('\nТреугольник остроугольный\n')
-    elif (AC * AC > AB * AB + BC * BC) or (AB * AB > BC * BC + AC * AC) or (BC * BC > AB * AB + AC * AC):
-        print('\nТреугольник тупоугольный\n')
+    # Определение типа треугольника
+
+    if ((ax == ay) and (bx == by) and (cx == cy)) or \
+        ((ay - ax == 1) and (by - bx == 1) and (cy - cx == 1)):
+        print('\nТреугольника не существует')
+        print('_______________________________________________________\n')
+        bool = False
+    elif (CA >= AB + BC) or (AB >= BC + CA) \
+        or (BC >= AB + CA) or (AB * BC * CA == 0):
+        print('\nТреугольника не существует')
+        print('_______________________________________________________\n')
+        bool = False
+    elif ((AB2 + BC2 <= CA2 + Eps) and (AB2 + BC2 >= CA2 - Eps)) or \
+         ((BC2 + CA2 <= AB2 + Eps) and (BC2 + CA2 >= AB2 - Eps)) or \
+         ((AB2 + CA2 <= BC2 + Eps) and (AB2 + CA2 >= BC2 - Eps)):
+        print('\nТреугольник прямоугольный')
+        bool = True
+    elif (AB2 + BC2 < CA2) or (BC2 + CA2 < AB2) or (AB2 + CA2 < BC2):
+        print('\nТреугольник тупоугольный')
+        bool = True
+    else:
+        print('\nТреугольник остроугольный')
+        bool = True
 
     # Вычисление скалярного произведения
 
-    scalarABBC = xab * xbc + yab * ybc
-    scalarBCCA = xbc * xca + ybc * yca
-    scalarABCA = xab * xca + yab * yca
+    # scalarABBC = xab * xbc + yab * ybc
+    # scalarBCCA = xbc * xca + ybc * yca
+    # scalarABCA = xab * xca + yab * yca
 
-    print('{}{}{}{}{}{}'.format('\nAB * BC = ', scalarABBC, '\nBC * CA = ', scalarBCCA, '\nAB * CA = ', scalarABCA))
+    # print('{}{}{}{}{}{}'.format('\nAB * BC = ', scalarABBC, '\nBC * CA = ', scalarBCCA, '\nAB * CA = ', scalarABCA))
 
-    if (AB >= BC + CA) or (BC >= AB + CA) or (CA >= AB + BC) or (AB * BC * CA == 0.0):
-        print('\nТреугольника не существует')
-    else:
-        cosABBC = degrees(acos(scalarABBC / (AB * BC)))
-        cosBCCA = degrees(acos(scalarBCCA / (BC * CA)))
-        cosABCA = degrees(acos(scalarABCA / (AB * CA)))
-        print('{}{}{}{}{}{}'.format('\ncosAB^BC = ', cosABBC, '\ncosBC^CA = ', cosBCCA, '\ncosAB^CA = ', cosABCA))
+    # if (AB >= BC + CA) or (BC >= AB + CA) or (CA >= AB + BC) or (AB * BC * CA == 0.0):
+    #    print('\nТреугольника не существует')
+    # else:
+    #    cosABBC = degrees(acos(scalarABBC / (AB * BC)))
+    #    cosBCCA = degrees(acos(scalarBCCA / (BC * CA)))
+    #    cosABCA = degrees(acos(scalarABCA / (AB * CA)))
+    #    print('{}{}{}{}{}{}'.format('\ncosAB^BC = ', cosABBC, '\ncosBC^CA = ', cosBCCA, '\ncosAB^CA = ', cosABCA))
 
-        print('{}{:.4}'. format('\nКосинус угла между векторами AB и BC = ', cosABBC))
-        print('{}{:.4}'. format('Косинус угла между векторами BC и CA = ', cosBCCA))
-        print('{}{:.4}'. format('Косинус угла между векторами AB и CA = ', cosABCA))
+    #    print('{}{:.4}'. format('\nКосинус угла между векторами AB и BC = ', cosABBC))
+    #    print('{}{:.4}'. format('Косинус угла между векторами BC и CA = ', cosBCCA))
+    #    print('{}{:.4}'. format('Косинус угла между векторами AB и CA = ', cosABCA))
 
-        if (cosABBC == 90) or (cosBCCA == 90) or (cosABCA == 90):
-            print('\nТреугольник прямоугольный')
-        elif (cosABBC < 90) and (cosBCCA < 90) and (cosABCA < 90):
-            print('\nТреугольник остроугольный')
-        else:
-            print('\nТреугольник тупоугольный')
+    #    if (cosABBC == 90) or (cosBCCA == 90) or (cosABCA == 90):
+    #        print('\nТреугольник прямоугольный')
+    #    elif (cosABBC < 90) and (cosBCCA < 90) and (cosABCA < 90):
+    #        print('\nТреугольник остроугольный')
+    #    else:
+    #        print('\nТреугольник тупоугольный')
 
         # Нахождение биссектрисы
 

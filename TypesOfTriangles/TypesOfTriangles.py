@@ -72,10 +72,6 @@ while True:
 
         # print('{}{}{}{}{}{}'.format('v1 = ', v1, '\nv2 = ', v2, '\nv3 = ', v3))
 
-    #    print('{}{:.4}'. format('\nКосинус угла между векторами AB и BC = ', cosABBC))
-    #    print('{}{:.4}'. format('Косинус угла между векторами BC и CA = ', cosBCCA))
-    #    print('{}{:.4}'. format('Косинус угла между векторами AB и CA = ', cosABCA))
-
     #    if (cosABBC == 90) or (cosBCCA == 90) or (cosABCA == 90):
     #        print('\nТреугольник прямоугольный')
     #    elif (cosABBC < 90) and (cosBCCA < 90) and (cosABCA < 90):

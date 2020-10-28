@@ -62,13 +62,15 @@ while True:
         print('\nТреугольник остроугольный')
         bool = True
 
-    # Вычисление скалярного произведения
+    if bool == True:
+        print('\nПроверка принадлежности точки P треугольнику ABC:')
+        px, py = map(int, input('Введите координаты px и py: ').split())
 
-    # scalarABBC = xab * xbc + yab * ybc
-    # scalarBCCA = xbc * xca + ybc * yca
-    # scalarABCA = xab * xca + yab * yca
+        v1 = (ax - px) * (by - ay) - (bx - ax) * (ay - py)
+        v2 = (bx - px) * (cy - by) - (cx - bx) * (by - py)
+        v3 = (cx - px) * (ay - cy) - (ax - cx) * (cy - py)
 
-    # print('{}{}{}{}{}{}'.format('\nAB * BC = ', scalarABBC, '\nBC * CA = ', scalarBCCA, '\nAB * CA = ', scalarABCA))
+        # print('{}{}{}{}{}{}'.format('v1 = ', v1, '\nv2 = ', v2, '\nv3 = ', v3))
 
     # if (AB >= BC + CA) or (BC >= AB + CA) or (CA >= AB + BC) or (AB * BC * CA == 0.0):
     #    print('\nТреугольника не существует')

@@ -72,14 +72,6 @@ while True:
 
         # print('{}{}{}{}{}{}'.format('v1 = ', v1, '\nv2 = ', v2, '\nv3 = ', v3))
 
-    # if (AB >= BC + CA) or (BC >= AB + CA) or (CA >= AB + BC) or (AB * BC * CA == 0.0):
-    #    print('\nТреугольника не существует')
-    # else:
-    #    cosABBC = degrees(acos(scalarABBC / (AB * BC)))
-    #    cosBCCA = degrees(acos(scalarBCCA / (BC * CA)))
-    #    cosABCA = degrees(acos(scalarABCA / (AB * CA)))
-    #    print('{}{}{}{}{}{}'.format('\ncosAB^BC = ', cosABBC, '\ncosBC^CA = ', cosBCCA, '\ncosAB^CA = ', cosABCA))
-
     #    print('{}{:.4}'. format('\nКосинус угла между векторами AB и BC = ', cosABBC))
     #    print('{}{:.4}'. format('Косинус угла между векторами BC и CA = ', cosBCCA))
     #    print('{}{:.4}'. format('Косинус угла между векторами AB и CA = ', cosABCA))

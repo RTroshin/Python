@@ -86,6 +86,12 @@ while True:
         pay = ay - py
         PA = sqrt((pax * pax) + (pay * pay))
 
+        # Нахождение полупериметров треугольников ABP, BCP, CAP
+            
+        p1 = (AB + PA + BP) / 2
+        p2 = (BC + BP + PC) / 2
+        p3 = (CA + PC + PA) / 2
+
         # Нахождение биссектрисы
 
         Hypotenuse = max(AC, AB, BC)

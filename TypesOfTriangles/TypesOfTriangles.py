@@ -72,13 +72,6 @@ while True:
 
         # print('{}{}{}{}{}{}'.format('v1 = ', v1, '\nv2 = ', v2, '\nv3 = ', v3))
 
-    #    if (cosABBC == 90) or (cosBCCA == 90) or (cosABCA == 90):
-    #        print('\nТреугольник прямоугольный')
-    #    elif (cosABBC < 90) and (cosBCCA < 90) and (cosABCA < 90):
-    #        print('\nТреугольник остроугольный')
-    #    else:
-    #        print('\nТреугольник тупоугольный')
-
         # Нахождение сторон треугольников через вершину P(px, py)
 
         bpx = px - bx

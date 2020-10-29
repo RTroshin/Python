@@ -79,6 +79,20 @@ while True:
     #    else:
     #        print('\nТреугольник тупоугольный')
 
+        # Нахождение сторон треугольников через вершину P(px, py)
+
+        bpx = px - bx
+        bpy = py - by
+        BP = sqrt((bpx * bpx) + (bpy * bpy))
+
+        pcx = cx - px
+        pcy = cy - py
+        PC = sqrt((pcx * pcx) + (pcy * pcy))
+
+        pax = ax - px
+        pay = ay - py
+        PA = sqrt((pax * pax) + (pay * pay))
+
         # Нахождение биссектрисы
 
         Hypotenuse = max(AC, AB, BC)

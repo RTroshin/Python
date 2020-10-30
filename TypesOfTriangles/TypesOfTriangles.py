@@ -92,6 +92,12 @@ while True:
         p2 = (BC + BP + PC) / 2
         p3 = (CA + PC + PA) / 2
 
+        # Нахождение площадей треугольников ABP, BCP, CAP
+
+        S1 = sqrt(p1 * (p1 - AB) * (p1 - BP) * (p1 - PA))
+        S2 = sqrt(p2 * (p2 - BC) * (p2 - BP) * (p2 - PC))
+        S3 = sqrt(p3 * (p3 - CA) * (p3 - PC) * (p3 - PA))
+
         # Нахождение биссектрисы
 
         Hypotenuse = max(AC, AB, BC)

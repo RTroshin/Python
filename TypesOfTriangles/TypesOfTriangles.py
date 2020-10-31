@@ -98,6 +98,22 @@ while True:
         S2 = sqrt(p2 * (p2 - BC) * (p2 - BP) * (p2 - PC))
         S3 = sqrt(p3 * (p3 - CA) * (p3 - PC) * (p3 - PA))
 
+        print('{}{}{}{}{}{}'.format('\n\nS1 = S2 = S3: ', S1, ' = ' , S2, ' = ', S3))
+
+        if (S1 == 0 and S2 < (S3 + Eps)) or (S2 == 0 and (S1 < S3) + Eps) or (S3 == 0 and S1 < (S2 + Eps)) and \
+            (S1 == 0 and S2 > (S3 - Eps)) or (S2 == 0 and S1 > (S3 - Eps)) or (S3 == 0 and S1 > (S2 - Eps)) \
+            (S1 == 0 and (S2 - Eps) < S3) or (S2 == 0 and (S1 - Eps) < S3) or (S3 == 0 and (S1 - Eps) < S2) and \
+            (S1 == 0 and (S2 + Eps) > S3) or (S2 == 0 and (S1 + Eps) > S3) or (S3 == 0 and (S1 + Eps) > S2):
+        #if  (v1 == 0 and v2 == 0) or \
+        #    (v2 == 0 and v3 == 0) or \
+        #    (v3 == 0 and v1 == 0):
+        #if  (v1 == 0 or v2 == 0 or v3 == 0):
+            print('\nТочка лежит на стороне треугольнике')
+            print('_______________________________________________________\n')
+        elif  (v1 < 0 and v2 < 0 and v3 < 0) or \
+            (v1 > 0 and v2 > 0 and v3 > 0):
+            print('\nТочка лежит внутри треугольника\n')
+
         # Нахождение биссектрисы
 
         Hypotenuse = max(AC, AB, BC)

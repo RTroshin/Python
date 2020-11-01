@@ -113,6 +113,22 @@ while True:
         elif  (v1 < 0 and v2 < 0 and v3 < 0) or \
             (v1 > 0 and v2 > 0 and v3 > 0):
             print('\nТочка лежит внутри треугольника\n')
+        
+            abx = bx - ax
+            aby = by - ay
+            AB = sqrt(abx * abx + aby * aby)
+
+            bcx = cx - bx
+            bcy = cy - by
+            BC = sqrt(bcx * bcx + bcy * bcy)
+
+            cax = ax - cx
+            cay = ay - cy
+            CA = sqrt(cax * cax + cay * cay)
+
+            AB2 = AB * AB
+            BC2 = BC * BC
+            CA2 = CA * CA
 
         # Нахождение биссектрисы
 

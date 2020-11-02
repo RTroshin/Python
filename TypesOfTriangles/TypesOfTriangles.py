@@ -130,6 +130,20 @@ while True:
             BC2 = BC * BC
             CA2 = CA * CA
 
+            # Нахождение сторон треугольников через вершину P(px, py)
+
+            apx = px - ax
+            apy = py - ay
+            ABP = sqrt((apx * apx) + (apy * apy))
+
+            bpx = px - bx
+            bpy = py - by
+            BCP = sqrt((bpx * bpx) + (bpy * bpy))
+
+            cpx = px - cx
+            cpy = py - cy
+            CAP = sqrt((cpx * cpx) + (cpy * cpy))
+
         # Нахождение биссектрисы
 
         Hypotenuse = max(AC, AB, BC)

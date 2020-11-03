@@ -87,7 +87,7 @@ while True:
         PA = sqrt((pax * pax) + (pay * pay))
 
         # Нахождение полупериметров треугольников ABP, BCP, CAP
-            
+
         p1 = (AB + PA + BP) / 2
         p2 = (BC + BP + PC) / 2
         p3 = (CA + PC + PA) / 2
@@ -113,7 +113,7 @@ while True:
         elif  (v1 < 0 and v2 < 0 and v3 < 0) or \
             (v1 > 0 and v2 > 0 and v3 > 0):
             print('\nТочка лежит внутри треугольника\n')
-        
+
             abx = bx - ax
             aby = by - ay
             AB = sqrt(abx * abx + aby * aby)
@@ -143,6 +143,12 @@ while True:
             cpx = px - cx
             cpy = py - cy
             CAP = sqrt((cpx * cpx) + (cpy * cpy))
+
+            # Нахождение полупериметров треугольников ABP, BCP, CAP
+
+            p1 = (AB + ABP + BCP) / 2
+            p2 = (BC + BCP + CAP) / 2
+            p3 = (CA + CAP + ABP) / 2
 
         # Нахождение биссектрисы
 

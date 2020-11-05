@@ -156,6 +156,12 @@ while True:
             S2 = sqrt(p2 * (p2 - BC) * (p2 - BCP) * (p2 - CAP))
             S3 = sqrt(p3 * (p3 - CA) * (p3 - CAP) * (p3 - ABP))
 
+            # Нахождение высот треугольников ABP, BCP, CAP
+
+            h1 = 2 * S1 / AB
+            h2 = 2 * S2 / BC
+            h3 = 2 * S3 / CA
+
         # Нахождение биссектрисы
 
         Hypotenuse = max(AC, AB, BC)

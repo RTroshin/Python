@@ -70,8 +70,6 @@ while True:
         v2 = (bx - px) * (cy - by) - (cx - bx) * (by - py)
         v3 = (cx - px) * (ay - cy) - (ax - cx) * (cy - py)
 
-        # print('{}{}{}{}{}{}'.format('v1 = ', v1, '\nv2 = ', v2, '\nv3 = ', v3))
-
         # Нахождение сторон треугольников через вершину P(px, py)
 
         bpx = px - bx

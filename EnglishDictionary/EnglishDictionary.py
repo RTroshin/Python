@@ -17,6 +17,16 @@ while True:
     if userChoice.lower() == 'выход':
         exit()
 
+    while True:
+        if (userChoice == '1') or (userChoice == '2') or\
+          (userChoice == '3') or (userChoice == '4'):
+            break
+        else:
+            userChoice = input('Выберите пункт меню: ')
+            if userChoice.lower() == 'выход':
+                exit()
+    print()
+
     # Вывод словаря на экран
 
     if (userChoice == '1'):

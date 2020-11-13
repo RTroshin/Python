@@ -2,6 +2,10 @@ print()
 print('Вас приветствует программа "Словарь"')
 englishWords = ['cat', 'apple', 'car', 'water']
 russianWords = ['кошка', 'яблоко', 'автомобиль', 'вода']
+alphabet = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i',\
+            'j', 'k', 'm', 'n', 'l', 'o', 'p', 'q', 'r',\
+            's', 't', 'u', 'v', 'w', 'x', 'y', 'z']
+numberWord = [3, 1, 3, 23]
 
 while True:
     print('Меню\n')
@@ -109,4 +113,5 @@ while True:
                 listNumber = int(input('Выберите номер слова из списка: '))
             englishWords.remove(englishWords[listNumber - 1])
             russianWords.remove(russianWords[listNumber - 1])
+            numberWord.remove(numberWord[listNumber - 1])
         print()

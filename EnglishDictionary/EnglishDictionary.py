@@ -1,5 +1,5 @@
 print()
-print('Вас приветствует программа "Словарь"')
+print('Вас приветствует программа "Словарь"!')
 englishWords = ['cat', 'apple', 'car', 'water']
 russianWords = ['кошка', 'яблоко', 'автомобиль', 'вода']
 alphabet = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i',\
@@ -74,7 +74,7 @@ while True:
             print('Ваш словарь пуст!\n')
         else:
             cor = True
-            
+
             listNumber = int(input('Редактирование слова\n\
 Выберите номер слова из списка: '))
             print('-' * 43)

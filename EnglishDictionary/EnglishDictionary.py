@@ -118,3 +118,11 @@ while True:
             russianWords.remove(russianWords[listNumber - 1])
             numberWord.remove(numberWord[listNumber - 1])
         print()
+
+    # Проверка
+
+    # print()
+    # print(englishWords)
+    # print(russianWords)
+    # print(numberWord)
+    # print()

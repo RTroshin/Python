@@ -142,11 +142,3 @@ while True:
                 russianWords[i], russianWords[i + 1] =\
                 russianWords[i + 1], russianWords[i]
                 swapped = True
-
-    # Проверка
-
-    # print()
-    # print(englishWords)
-    # print(russianWords)
-    # print(numberWord)
-    # print()

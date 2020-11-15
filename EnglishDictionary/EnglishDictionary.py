@@ -119,6 +119,30 @@ while True:
             numberWord.remove(numberWord[listNumber - 1])
         print()
 
+    # Сортировка массива по алфавиту
+
+    numberWord = []
+    word = []
+    for i in range(len(englishWords)):
+        word = englishWords[i]
+        for c in range(len(alphabet)):
+            if (word[0] == alphabet[c]):
+                if len(numberWord) < len(englishWords): 
+                    numberWord.append(c + 1)
+
+    swapped = True
+    while swapped != False:
+        swapped = False
+        for i in range(len(numberWord) - 1):
+            if numberWord[i + 1] < numberWord[i]:
+                numberWord[i], numberWord[i + 1] =\
+                numberWord[i + 1], numberWord[i]
+                englishWords[i], englishWords[i + 1] =\
+                englishWords[i + 1], englishWords[i]
+                russianWords[i], russianWords[i + 1] =\
+                russianWords[i + 1], russianWords[i]
+                swapped = True
+
     # Проверка
 
     # print()

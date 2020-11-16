@@ -22,6 +22,8 @@ while True:
     bx, by = map(int, input('Координаты bx и by: ').split())
     cx, cy = map(int, input('Координаты cx и cy: ').split())
 
+    # Вычисление длин сторон треугольника
+
     abx = bx - ax
     aby = by - ay
     AB = sqrt(abx * abx + aby * aby)

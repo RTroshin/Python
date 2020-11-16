@@ -57,9 +57,9 @@ while True:
         print('\nТреугольника не существует')
         print('_______________________________________________________\n')
         bool = False
-    elif ((AB2 + BC2 <= CA2 + Eps) and (AB2 + BC2 >= CA2 - Eps)) or \
-         ((BC2 + CA2 <= AB2 + Eps) and (BC2 + CA2 >= AB2 - Eps)) or \
-         ((AB2 + CA2 <= BC2 + Eps) and (AB2 + CA2 >= BC2 - Eps)):
+    elif abs((AB2 - (BC2 + CA2))) <= Eps\
+        or abs((BC2 - (AB2 + CA2))) <= Eps\
+        or abs((CA2 - (AB2 + BC2))) <= Eps:
         print('\nТреугольник прямоугольный')
         bool = True
     elif (AB2 + BC2 < CA2) or (BC2 + CA2 < AB2) or (AB2 + CA2 < BC2):

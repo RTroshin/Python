@@ -70,8 +70,36 @@ while True:
         bool = True
 
     if bool == True:
-        print('\nПроверка принадлежности точки P треугольнику ABC:')
-        px, py = map(int, input('Введите координаты px и py: ').split())
+
+        # Вычисление длины биссектрисы,
+        # проведённой из наименьшего угла треугольника
+
+        # Нахождение полупериметра треугольника ABC
+
+        p = (AB + BC + CA) / 2
+
+        # Нахождение площади треугольника ABC
+
+        S = sqrt(p * (p - AB) * (p - BC) * (p - CA))
+
+        minSide = str(min(AB, BC, CA))
+        if minSide == AB:
+            bis = 2 * sqrt((BC * CA * p) * (p - AB)) / (BC + CA)
+            minSide = 'AB'
+            nameBis = CD
+        elif minSide == 'BC':
+            bis = 2 * sqrt((AB * CA * p) * (p - BC)) / (AB + CA)
+            minSide = 'BC'
+            nameBis = 'AD'
+        else:
+            bis = 2 * sqrt((AB * BC * p) * (p - CA)) / (AB + BC)
+            minSide = 'AC'
+            nameBis = 'BD'
+        print('{}{}{}'.format('\nНаименьший угол треугольника лежит \
+напротив наименьшей стороны (', minSide, ')'))
+        print('{}{}{}{:.4f}'.format('Длина биссектрисы ', nameBis,\
+' равна\nL = ', bis))
+
 
         v1 = (ax - px) * (by - ay) - (bx - ax) * (ay - py)
         v2 = (bx - px) * (cy - by) - (cx - bx) * (by - py)

@@ -120,7 +120,7 @@ while True:
         PA = sqrt((pax * pax) + (pay * pay))
 
         # Нахождение полупериметров треугольников ABP, BCP, CAP
-
+            
         p1 = (AB + PA + BP) / 2
         p2 = (BC + BP + PC) / 2
         p3 = (CA + PC + PA) / 2
@@ -131,63 +131,27 @@ while True:
         S2 = sqrt(p2 * (p2 - BC) * (p2 - BP) * (p2 - PC))
         S3 = sqrt(p3 * (p3 - CA) * (p3 - PC) * (p3 - PA))
 
-        if (S1 == 0 and S2 < (S3 + Eps)) or (S2 == 0 and (S1 < S3) + Eps) or (S3 == 0 and S1 < (S2 + Eps)) and \
-            (S1 == 0 and S2 > (S3 - Eps)) or (S2 == 0 and S1 > (S3 - Eps)) or (S3 == 0 and S1 > (S2 - Eps)) \
-            (S1 == 0 and (S2 - Eps) < S3) or (S2 == 0 and (S1 - Eps) < S3) or (S3 == 0 and (S1 - Eps) < S2) and \
-            (S1 == 0 and (S2 + Eps) > S3) or (S2 == 0 and (S1 + Eps) > S3) or (S3 == 0 and (S1 + Eps) > S2):
+        # print('{}{}{}{}{}{}{}{}'.format('\n\nS1 = ', S1,\
+        # ' S2 = ' , S2, ' S3 = ', S3, '\nS - (S1 + S2 + S3) = ',\
+        # abs(S - (S1 + S2 + S3))))
+        # print('{}{}'.format('S = ', S))
+        # print('{}{}'.format('S1 + S2 = ', S1 + S2))
+        # print('{}{}'.format('S2 + S3 = ', S2 + S3))
+        # print('{}{}'.format('S1 + S3 = ', S1 + S3))
+
+        if  abs((S - (S1 + S2))) <= Eps\
+            or abs((S - (S2 + S3))) <= Eps\
+            or abs((S - (S1 + S3))) <= Eps:
             print('\nТочка лежит на стороне треугольнике')
             print('_______________________________________________________\n')
-        elif  (v1 < 0 and v2 < 0 and v3 < 0) or \
-            (v1 > 0 and v2 > 0 and v3 > 0):
+        elif abs((S - (S1 + S2 + S3))) <= Eps:
             print('\nТочка лежит внутри треугольника\n')
-
-            abx = bx - ax
-            aby = by - ay
-            AB = sqrt(abx * abx + aby * aby)
-
-            bcx = cx - bx
-            bcy = cy - by
-            BC = sqrt(bcx * bcx + bcy * bcy)
-
-            cax = ax - cx
-            cay = ay - cy
-            CA = sqrt(cax * cax + cay * cay)
-
-            AB2 = AB * AB
-            BC2 = BC * BC
-            CA2 = CA * CA
-
-            # Нахождение сторон треугольников через вершину P(px, py)
-
-            apx = px - ax
-            apy = py - ay
-            ABP = sqrt((apx * apx) + (apy * apy))
-
-            bpx = px - bx
-            bpy = py - by
-            BCP = sqrt((bpx * bpx) + (bpy * bpy))
-
-            cpx = px - cx
-            cpy = py - cy
-            CAP = sqrt((cpx * cpx) + (cpy * cpy))
-
-            # Нахождение полупериметров треугольников ABP, BCP, CAP
-
-            p1 = (AB + ABP + BCP) / 2
-            p2 = (BC + BCP + CAP) / 2
-            p3 = (CA + CAP + ABP) / 2
-
-            # Нахождение площадей треугольников ABP, BCP, CAP
-
-            S1 = sqrt(p1 * (p1 - AB) * (p1 - BCP) * (p1 - ABP))
-            S2 = sqrt(p2 * (p2 - BC) * (p2 - BCP) * (p2 - CAP))
-            S3 = sqrt(p3 * (p3 - CA) * (p3 - CAP) * (p3 - ABP))
 
             # Нахождение высот треугольников ABP, BCP, CAP
 
-            h1 = 2 * S1 / AB
-            h2 = 2 * S2 / BC
-            h3 = 2 * S3 / CA
+            h1 = 2 * S1 / AB;
+            h2 = 2 * S2 / BC;
+            h3 = 2 * S3 / CA;
 
             # Сравнение высот и поиск минимальной
 
@@ -199,7 +163,7 @@ while True:
             else:
                 side = 'CA'
             print('{}{}{}{:0.4f}'.format('Расстояние от точки P \
-до ближайшей стороны треугольника (сторона ', side, '):\nl = ', minDistance))
+до ближайшей стороны треугольника (', side, '):\nl = ', minDistance))
             print('_______________________________________________________\n')
         else:
             print('\nТочка не лежит внутри треугольника')

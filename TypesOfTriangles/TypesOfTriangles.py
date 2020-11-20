@@ -162,8 +162,8 @@ while True:
                 side = 'BC'
             else:
                 side = 'CA'
-            print('{}{}{}{:0.4f}'.format('Расстояние от точки P \
-до ближайшей стороны треугольника (', side, '):\nl = ', minDistance))
+            print('Расстояние от точки P до ближайшей стороны треугольника ({}\
+):\nl = {:0.4f}'.format(side, minDistance))
             print('-' * 55, '\n')
         else:
             print('\nТочка не лежит внутри треугольника')

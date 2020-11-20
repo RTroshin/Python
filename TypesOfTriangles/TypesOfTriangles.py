@@ -27,17 +27,17 @@ while True:
     abx = bx - ax
     aby = by - ay
     AB = sqrt(abx * abx + aby * aby)
-    print('{}{:.4f}'.format('\nДлина стороны AB = ', AB))
+    print('\nДлина стороны AB = {:.4f}'.format(AB))
 
     bcx = cx - bx
     bcy = cy - by
     BC = sqrt(bcx * bcx + bcy * bcy)
-    print('{}{:.4f}'.format('Длина стороны BC = ', BC))
+    print('Длина стороны BC = {:.4f}'.format(BC))
 
     cax = ax - cx
     cay = ay - cy
     CA = sqrt(cax * cax + cay * cay)
-    print('{}{:.4f}'.format('Длина стороны CA = ', CA))
+    print('Длина стороны CA = {:.4f}'.format(CA))
 
     AB2 = AB * AB
     BC2 = BC * BC

@@ -131,14 +131,6 @@ while True:
         S2 = sqrt(p2 * (p2 - BC) * (p2 - BP) * (p2 - PC))
         S3 = sqrt(p3 * (p3 - CA) * (p3 - PC) * (p3 - PA))
 
-        # print('{}{}{}{}{}{}{}{}'.format('\n\nS1 = ', S1,\
-        # ' S2 = ' , S2, ' S3 = ', S3, '\nS - (S1 + S2 + S3) = ',\
-        # abs(S - (S1 + S2 + S3))))
-        # print('{}{}'.format('S = ', S))
-        # print('{}{}'.format('S1 + S2 = ', S1 + S2))
-        # print('{}{}'.format('S2 + S3 = ', S2 + S3))
-        # print('{}{}'.format('S1 + S3 = ', S1 + S3))
-
         if  abs((S - (S1 + S2))) <= Eps\
             or abs((S - (S2 + S3))) <= Eps\
             or abs((S - (S1 + S3))) <= Eps:

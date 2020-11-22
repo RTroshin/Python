@@ -41,13 +41,16 @@ while True:
             print('Ваш словарь пуст!\n')
         else:
             number = 1
-            print('-' * 43)
-            print('|  №  |      Слово      |     Перевод     |')
-            print('-' * 43)
+            print('┌', '─' * 5, '┬', '─' * 17, '┬', '─' * 17, '┐', sep = '')
+            print('│  №  │      Слово      │     Перевод     │')
+            print('├', '─' * 5, '┼', '─' * 17, '┼', '─' * 17, '┤', sep = '')
             for i in range(len(englishWords)):
-                print('|{:^5d}| {:<15} | {:<15} |'\
+                print('│{:^5d}│ {:<15} │ {:<15} │'\
                       .format(number, englishWords[i], russianWords[i]))
-                print('-' * 43)
+                if number != len(englishWords):
+                    print('├', '─' * 5, '┼', '─' * 17, '┼', '─' * 17, '┤', sep = '')
+                else:
+                    print('└', '─' * 5, '┴', '─' * 17, '┴', '─' * 17, '┘', sep = '')                    
                 number += 1
         print()
 

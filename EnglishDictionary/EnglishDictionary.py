@@ -1,4 +1,4 @@
-# Программа "Словарь"
+# Программа "English dictionary"
 #
 
 print()

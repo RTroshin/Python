@@ -2,7 +2,7 @@
 #
 
 print()
-print('Вас приветствует программа "Словарь"!')
+print('Вас приветствует программа "English dictionary"!')
 englishWords = ['cat', 'apple', 'car', 'water']
 russianWords = ['кошка', 'яблоко', 'автомобиль', 'вода']
 alphabet = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i',\

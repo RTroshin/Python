@@ -76,6 +76,7 @@ while True:
             print('Выберите тип тренировки:')
             print('1. Слово-перевод')
             print('2. Перевод-слово')
+            print('3. Правописание')
             print('\nДля того, чтобы вернуться в предыдущее меню, \
 наберите "Назад""\n')
             userChoiceTraining = input('Выберите пункт меню: ')
@@ -136,6 +137,35 @@ while True:
                         print(str(i + 1), ') ', EasyEnglishWords[i])
                     userAnswer = input('\nВаш ответ: ')
                     if userAnswer == str(trueTranslate + 1):
+                        RussianWordsTraining.\
+                        remove(RussianWordsTraining[trueTranslate])
+                        RussianWordsTraining.insert(trueTranslate, 'None')
+                        print('\nВерно!\n')
+                        trueAmount += 1
+                    else:
+                        print('\nНеверно!\nПопробуйте ещё раз!\n')
+                    if len(RussianWordsTraining) == trueAmount:
+                        print('Поздравляю!\nВы изучили все слова!\n')
+                        break
+
+            # Тренировка на правописание
+
+            if (userChoiceTraining == '3'):
+                print()
+                print('\nТренировка "Правописание"\n\
+Введите верный перевод из списка\n')
+                trueAmount = 0
+                while True:
+                    trueTranslate = random.randint(0,\
+                                    len(RussianWordsTraining) - 1)
+                    if RussianWordsTraining[trueTranslate] == 'None':
+                        while RussianWordsTraining[trueTranslate] == 'None':
+                            trueTranslate = random.randint(0,\
+                                            len(RussianWordsTraining) - 1)                       
+                    print('Введите верный перевод: ',\
+                          RussianWordsTraining[trueTranslate])
+                    userAnswer = input('\nВаш ответ: ')
+                    if userAnswer.lower() == EnglishWordsTraining[trueTranslate]:
                         RussianWordsTraining.\
                         remove(RussianWordsTraining[trueTranslate])
                         RussianWordsTraining.insert(trueTranslate, 'None')

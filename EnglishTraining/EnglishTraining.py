@@ -75,6 +75,7 @@ while True:
             print()
             print('Выберите тип тренировки:')
             print('1. Слово-перевод')
+            print('2. Перевод-слово')
             print('\nДля того, чтобы вернуться в предыдущее меню, \
 наберите "Назад""\n')
             userChoiceTraining = input('Выберите пункт меню: ')
@@ -84,7 +85,7 @@ while True:
             if userChoiceTraining.lower() == 'назад':
                 break
 
-            # Тренировка на знание перевода (с русского на английский)
+            # Тренировка на знание перевода (с английского на русский)
 
             if (userChoiceTraining == '1'):
                 print()
@@ -112,6 +113,37 @@ while True:
                     else:
                         print('\nНеверно!\nПопробуйте ещё раз!\n')
                     if len(EnglishWordsTraining) == trueAmount:
+                        print('Поздравляю!\nВы изучили все слова!\n')
+                        break
+
+            # Тренировка на знание перевода (с русского на английский)
+
+            if (userChoiceTraining == '2'):
+                print()
+                print('\nТренировка "Перевод-слово"\n\
+Выберите верный перевод из списка\n')
+                trueAmount = 0
+                while True:
+                    trueTranslate = random.randint(0,\
+                                    len(RussianWordsTraining) - 1)
+                    if RussianWordsTraining[trueTranslate] == 'None':
+                        while RussianWordsTraining[trueTranslate] == 'None':
+                            trueTranslate = random.randint(0,\
+                                            len(RussianWordsTraining) - 1)                       
+                    print('Выберите верный перевод: ',\
+                          RussianWordsTraining[trueTranslate])
+                    for i in range(len(EasyEnglishWords)):
+                        print(str(i + 1), ') ', EasyEnglishWords[i])
+                    userAnswer = input('\nВаш ответ: ')
+                    if userAnswer == str(trueTranslate + 1):
+                        RussianWordsTraining.\
+                        remove(RussianWordsTraining[trueTranslate])
+                        RussianWordsTraining.insert(trueTranslate, 'None')
+                        print('\nВерно!\n')
+                        trueAmount += 1
+                    else:
+                        print('\nНеверно!\nПопробуйте ещё раз!\n')
+                    if len(RussianWordsTraining) == trueAmount:
                         print('Поздравляю!\nВы изучили все слова!\n')
                         break
     print()

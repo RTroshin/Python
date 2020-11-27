@@ -1,5 +1,4 @@
 # Программа "English Training"
-# Реализованы следующие возможности:
 #
 
 import copy, random
@@ -77,6 +76,7 @@ while True:
             print('1. Слово-перевод')
             print('2. Перевод-слово')
             print('3. Правописание')
+            print('4. Конструктор слов')
             print('\nДля того, чтобы вернуться в предыдущее меню, \
 наберите "Назад""\n')
             userChoiceTraining = input('Выберите пункт меню: ')
@@ -165,6 +165,47 @@ while True:
                     print('Введите верный перевод: ',\
                           RussianWordsTraining[trueTranslate])
                     userAnswer = input('\nВаш ответ: ')
+                    if userAnswer.lower() == EnglishWordsTraining[trueTranslate]:
+                        RussianWordsTraining.\
+                        remove(RussianWordsTraining[trueTranslate])
+                        RussianWordsTraining.insert(trueTranslate, 'None')
+                        print('\nВерно!\n')
+                        trueAmount += 1
+                    else:
+                        print('\nНеверно!\nПопробуйте ещё раз!\n')
+                    if len(RussianWordsTraining) == trueAmount:
+                        print('Поздравляю!\nВы изучили все слова!\n')
+                        break
+
+            # Конструктор слов
+
+            if (userChoiceTraining == '4'):
+                print()
+                print('\nТренировка "Конструктор слов"\n')
+                trueAmount = 0
+                while True:
+                    constructionWord = []
+                    trueTranslate = random.randint(0,\
+                                    len(RussianWordsTraining) - 1)
+                    if RussianWordsTraining[trueTranslate] == 'None':
+                        while RussianWordsTraining[trueTranslate] == 'None':
+                            trueTranslate = random.randint(0,\
+                                            len(RussianWordsTraining) - 1)                       
+                    print('Соберите перевод слова из букв: ',\
+                          RussianWordsTraining[trueTranslate])
+                    word = EnglishWordsTraining[trueTranslate]
+                    print()
+                    for i in range(len(alphabet)):
+                        for j in range(len(word)):
+                            if alphabet[i] == word[j]:
+                                constructionWord.append(alphabet[i])
+                    random.shuffle(constructionWord)
+                    for i in constructionWord:
+                        print(i, end = ' ')
+                    print()
+
+                    userAnswer = input('\nВаш ответ: ')
+
                     if userAnswer.lower() == EnglishWordsTraining[trueTranslate]:
                         RussianWordsTraining.\
                         remove(RussianWordsTraining[trueTranslate])

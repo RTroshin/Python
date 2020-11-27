@@ -217,4 +217,9 @@ while True:
                     if len(RussianWordsTraining) == trueAmount:
                         print('Поздравляю!\nВы изучили все слова!\n')
                         break
+
+    HardEnglishWords = ['chainsaw', 'squirrel', 'castle',\
+                        'homeland', 'sewerage', 'bottom']
+    HardRussianWords = ['бензопила', 'белка', 'замок',\
+                        'родина', 'канализация', 'дно']
     print()

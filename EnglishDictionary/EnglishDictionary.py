@@ -36,7 +36,7 @@ while True:
 
     # Вывод словаря на экран
 
-    if (userChoice == '1'):
+    if userChoice == '1':
         if len(englishWords) == 0:
             print('Ваш словарь пуст!\n')
         else:
@@ -56,7 +56,7 @@ while True:
 
     # Добавление слова в словарь
 
-    if (userChoice == '2'):
+    if userChoice == '2':
         add = True
         print('Добавление слова в словарь')
         enWord = input('Введите слово на английском языке: ')
@@ -75,7 +75,7 @@ while True:
 
     # Редактировать слово
 
-    if (userChoice == '3'):
+    if userChoice == '3':
         if len(englishWords) == 0:
             print('Ваш словарь пуст!\n')
         else:
@@ -107,7 +107,7 @@ while True:
 
     # Удаление слова из словаря
 
-    if (userChoice == '4'):
+    if userChoice == '4':
         if len(englishWords) == 0:
             print('Ваш словарь пуст!\n')
         else:

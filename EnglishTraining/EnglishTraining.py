@@ -4,7 +4,7 @@
 import copy, random
 
 print()
-print('Вас приветствует программа "English Training"!')
+print('Вас приветствует программа "English training"!')
 EasyEnglishWords = ['food', 'bike', 'apple', 'do', 'mean']
 EasyRussianWords = ['еда', 'велосипед', 'яблоко', 'делать', 'иметь в виду']
 EasyEnglishWordsTraining = []
@@ -96,7 +96,7 @@ while True:
                     if EnglishWordsTraining[trueTranslate] == 'None':
                         while EnglishWordsTraining[trueTranslate] == 'None':
                             trueTranslate = random.randint(0,\
-                                            len(EnglishWordsTraining) - 1)                       
+                                            len(EnglishWordsTraining) - 1)
                     print('Выберите верный перевод: ',\
                           EnglishWordsTraining[trueTranslate])
                     for i in range(len(EasyRussianWords)):
@@ -127,7 +127,7 @@ while True:
                     if RussianWordsTraining[trueTranslate] == 'None':
                         while RussianWordsTraining[trueTranslate] == 'None':
                             trueTranslate = random.randint(0,\
-                                            len(RussianWordsTraining) - 1)                       
+                                            len(RussianWordsTraining) - 1)
                     print('Выберите верный перевод: ',\
                           RussianWordsTraining[trueTranslate])
                     for i in range(len(EasyEnglishWords)):
@@ -158,7 +158,7 @@ while True:
                     if RussianWordsTraining[trueTranslate] == 'None':
                         while RussianWordsTraining[trueTranslate] == 'None':
                             trueTranslate = random.randint(0,\
-                                            len(RussianWordsTraining) - 1)                       
+                                            len(RussianWordsTraining) - 1)
                     print('Введите верный перевод: ',\
                           RussianWordsTraining[trueTranslate])
                     userAnswer = input('\nВаш ответ: ')
@@ -187,7 +187,7 @@ while True:
                     if RussianWordsTraining[trueTranslate] == 'None':
                         while RussianWordsTraining[trueTranslate] == 'None':
                             trueTranslate = random.randint(0,\
-                                            len(RussianWordsTraining) - 1)                       
+                                            len(RussianWordsTraining) - 1)
                     print('Соберите перевод слова из букв: ',\
                           RussianWordsTraining[trueTranslate])
                     print()
